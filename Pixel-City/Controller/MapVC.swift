@@ -144,6 +144,8 @@ extension MapVC: MKMapViewDelegate {
         let annotation = DroppablePin(coordinate: touchCoordinate, identifier: "droppablePin")
         mapView.addAnnotation(annotation)
         
+        print(flickrUrl(withAnnotation: annotation, andNumberOfPhotos: 40))
+        
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(touchCoordinate, regionradius * 2.0, regionradius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
