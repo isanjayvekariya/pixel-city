@@ -50,6 +50,13 @@
                                     <constraint firstItem="ELT-Ae-6eN" firstAttribute="centerY" secondItem="f9e-sM-Hq5" secondAttribute="centerY" id="JR6-Ls-8kq"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRc-Su-n3N">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="qiZ-SB-MAC"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj5-7U-OsP">
                                 <rect key="frame" x="309" y="597" width="50" height="50"/>
                                 <constraints>
@@ -61,22 +68,18 @@
                                     <action selector="centerMapBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ip-wB-cSG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRc-Su-n3N">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hRc-Su-n3N" secondAttribute="trailing" id="8RE-re-mJo"/>
+                            <constraint firstAttribute="bottom" secondItem="hRc-Su-n3N" secondAttribute="bottom" id="B3C-ov-Faj"/>
                             <constraint firstAttribute="trailing" secondItem="f9e-sM-Hq5" secondAttribute="trailing" id="KOp-Ql-3w5"/>
+                            <constraint firstItem="hRc-Su-n3N" firstAttribute="top" secondItem="Pj5-7U-OsP" secondAttribute="bottom" constant="20" id="LxO-5N-tD9"/>
                             <constraint firstAttribute="trailing" secondItem="Tid-3s-996" secondAttribute="trailing" id="c6n-wV-dj6"/>
                             <constraint firstItem="Tid-3s-996" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dbZ-ca-4C9"/>
-                            <constraint firstItem="mHf-xs-VU4" firstAttribute="top" secondItem="Pj5-7U-OsP" secondAttribute="bottom" constant="20" id="eAR-i7-KkP"/>
                             <constraint firstItem="f9e-sM-Hq5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fOo-GQ-7rt"/>
                             <constraint firstItem="hRc-Su-n3N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iMR-dn-ZcH"/>
                             <constraint firstItem="hRc-Su-n3N" firstAttribute="top" secondItem="Tid-3s-996" secondAttribute="bottom" id="oTd-hf-aT1"/>
-                            <constraint firstItem="hRc-Su-n3N" firstAttribute="top" secondItem="mHf-xs-VU4" secondAttribute="bottom" id="oij-SE-IDf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pj5-7U-OsP" secondAttribute="trailing" id="rW3-XA-ELi"/>
                             <constraint firstItem="f9e-sM-Hq5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ukb-wR-nsR"/>
                             <constraint firstItem="Tid-3s-996" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xsg-qn-ztx"/>
@@ -84,6 +87,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Tid-3s-996" id="CRl-uj-OZc"/>
+                        <outlet property="pullUpView" destination="hRc-Su-n3N" id="J2t-FY-K1R"/>
+                        <outlet property="pullUpViewHeightConstarint" destination="qiZ-SB-MAC" id="XrS-0i-R2t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
