@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,6 +95,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="169.56521739130437"/>
+        </scene>
+        <!--PopVC-->
+        <scene sceneID="JpN-jz-SRx">
+            <objects>
+                <viewController storyboardIdentifier="PopVC" id="opw-Aj-00K" customClass="PopVC" customModule="Pixel_City" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OvP-H5-5KJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oTT-2m-z7X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KSX-nF-nfi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="63Z-kC-OhF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbW-gP-1Pt">
+                                <rect key="frame" x="87.5" y="622" width="200" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap to dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOs-kJ-MFC">
+                                        <rect key="frame" x="14.5" y="0.5" width="172.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="DMV-vv-SYM"/>
+                                    <constraint firstItem="UOs-kJ-MFC" firstAttribute="centerY" secondItem="mbW-gP-1Pt" secondAttribute="centerY" id="J17-lI-VAj"/>
+                                    <constraint firstItem="UOs-kJ-MFC" firstAttribute="centerX" secondItem="mbW-gP-1Pt" secondAttribute="centerX" id="XdU-fn-AGL"/>
+                                    <constraint firstAttribute="width" constant="200" id="mv3-XD-uo2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="63Z-kC-OhF" firstAttribute="top" secondItem="KSX-nF-nfi" secondAttribute="top" id="3po-MO-H0v"/>
+                            <constraint firstAttribute="trailing" secondItem="63Z-kC-OhF" secondAttribute="trailing" id="4AF-oE-rLo"/>
+                            <constraint firstItem="oTT-2m-z7X" firstAttribute="top" secondItem="mbW-gP-1Pt" secondAttribute="bottom" constant="20" id="6pT-Ac-CO1"/>
+                            <constraint firstItem="mbW-gP-1Pt" firstAttribute="centerX" secondItem="KSX-nF-nfi" secondAttribute="centerX" id="7io-af-1Ss"/>
+                            <constraint firstItem="63Z-kC-OhF" firstAttribute="leading" secondItem="KSX-nF-nfi" secondAttribute="leading" id="B5t-wY-DFp"/>
+                            <constraint firstItem="oTT-2m-z7X" firstAttribute="top" secondItem="63Z-kC-OhF" secondAttribute="bottom" id="waa-SO-fAJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popImageView" destination="63Z-kC-OhF" id="UAU-i1-lDM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TIL-Ra-jI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.39999999999998" y="169.56521739130437"/>
         </scene>
     </scenes>
     <resources>
